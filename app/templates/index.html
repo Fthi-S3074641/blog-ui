@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="mainbody">
+	<div class="result">
+		<div class="graph">
+			{% if mov %}
+			<h1>{{ mov.nickname }}</h1>
+			{% else %}
+			<h1> user.nickname</h1>
+			{% endif %}
+			</div>
+		<div class="progress">
+			<h1>Hi progress</h1></div>
+		</div>
+	<div class="movie" >
+  <form action="" method="post" name="index">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter your Movie: <br>
+          {{ form.movie(size=40) }}<input type="submit" value="Do analysis"></p>
+
+  </form>
+		</div>
+	</div>
+	{% endblock %}
+
+

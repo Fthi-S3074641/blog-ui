@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="mainbody">
+	<div class="result">
+		<div class="graph">
+			<h1>H, {{ user.nickname }}!</h1></div>
+		<div class="progress">
+			<h1>Hi progress</h1></div>
+		</div>
+	<div class="movie">
+  <form action="" method="post" name="moviesa">
+      {{ mtitle.hidden_tag() }}
+      <p>
+          Please enter your Movie: <br>
+          {{ mtitle.movie(size=80) }}<br>
+      </p>
+      <!--<p>{{ form.remember_me }} Remember Me</p>-->
+      <p><input type="submit" value="Sign In"></p>
+  </form>
+		</div>
+	</div>
+	{% endblock %}
+
+

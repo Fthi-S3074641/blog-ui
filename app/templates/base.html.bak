@@ -1,0 +1,23 @@
+<html>
+<head>
+{% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Sentiment Analysis</title>
+    {% endif %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mystyle.css') }}">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</head>
+  <body>
+   <div class="heading"> <a id="topic" href="/index">Movie Sentiment Analysis</a>
+	<hr>
+</div>
+    {% block content %}{% endblock %}
+ <div class="footing">
+  <hr>@: <a href="/ftu">Elbert</a>
+  <a href="/ftu">Aida</a>
+  <a href="/ftu">Fthi</a>
+  </div>
+  </body>
+</html>
