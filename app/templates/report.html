@@ -4,15 +4,7 @@
 <div id="mainbody">
 	<div class="result">
 		<div class="graph">
-			{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-		  <li>{{ message }}</li>
-    {% endfor %}
-			</ul>
-				{% endif %}
-			{% endwith %}
+		{{ bar_chart.render()|safe }}
 	</div>
 		<div class="progress">
 			<h1>Hiiiiiii progress</h1>
@@ -20,11 +12,12 @@
 
 		</div>
 	<div class="movie">
-  <form action="" method="post" name="index">
+  <form action="" method="post" name="search">
       {{ form.hidden_tag() }}
       <p>
           Please enter your Movie: <br>
           {{ form.movie(size=40) }}<input type="submit" value="Do analysis"></p>
+
   </form>
 		</div>
 	</div>

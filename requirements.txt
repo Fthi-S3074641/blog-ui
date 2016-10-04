@@ -1,3 +1,5 @@
 flask
 flask-wtf
 Flask
+pygal
+flask-pymongo

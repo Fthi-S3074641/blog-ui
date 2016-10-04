@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="mainbody">
+	<div class="result">
+		<div class="graph" background-color="#00ff00">
+			</div>
+		<div class="progress">
+			<h1>Hi progress</h1></div>
+		</div>
+	<div class="movie" >
+      
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+		  <li>{{ message }}</li>
+    {% endfor %}
+			</ul>
+				{% endif %}
+			{% endwith %}
+		</div>
+	</div>
+	{% endblock %}
+
+
